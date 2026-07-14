@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire de réservation - Shekinah Royale Events</title>
+<style>
+:root{--bg:#050b1c;--bg2:#08182f;--gold:#d4af37;--text:#f5f5f5;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:radial-gradient(circle at top,rgba(212,175,55,0.12),transparent 25%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);min-height:100vh;}
+.container{max-width:900px;margin:40px auto;padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(212,175,55,0.15);border-radius:24px;}
+header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}
+.logo{font-family:'Cinzel',serif;font-size:1.6rem;color:var(--gold)}
+.form-title{font-family:'Cinzel',serif;font-size:2.4rem;margin-bottom:12px}
+.form-subtitle{color:rgba(245,245,245,0.8);margin-bottom:24px;line-height:1.7}
+form{display:grid;gap:16px}
+label{display:grid;gap:8px;font-size:0.95rem;color:rgba(245,245,245,0.9)}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:var(--text);outline:none}
+textarea{min-height:140px;resize:vertical}
+button{padding:15px 22px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--gold),#ffd67a);color:#071026;font-weight:700;cursor:pointer}
+button:hover{opacity:0.95}
+.back-link{display:inline-block;margin-top:18px;color:var(--gold);text-decoration:none}
+@media(max-width:720px){.container{margin:20px 16px;padding:20px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">Shekinah Royale Events</div>
+    <a class="back-link" href="index.html">← Retour</a>
+  </header>
+  <h1 class="form-title">Réservation</h1>
+  <p class="form-subtitle">Remplissez ce formulaire pour envoyer votre demande à shekinarevents@gmail.com.</p>
+  <form action="mailto:shekinarevents@gmail.com" method="post" enctype="text/plain">
+    <label>
+      Nom complet
+      <input type="text" name="Nom" placeholder="Votre nom complet" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="Email" placeholder="votre@email.com" required />
+    </label>
+    <label>
+      Téléphone
+      <input type="tel" name="Téléphone" placeholder="+33 6 12 34 56 78" required />
+    </label>
+    <label>
+      Type d'événement
+      <select name="Type d'événement" required>
+        <option value="">Choisir un type</option>
+        <option>Mariage</option>
+        <option>Anniversaire</option>
+        <option>Soirée privée</option>
+        <option>Événement pro</option>
+      </select>
+    </label>
+    <label>
+      Date souhaitée
+      <input type="date" name="Date souhaitée" required />
+    </label>
+    <label>
+      Message
+      <textarea name="Message" placeholder="Décrivez votre projet..." required></textarea>
+    </label>
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+</div>
+</body>
+</html>

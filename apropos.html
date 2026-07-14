@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos - Shekinah Royale Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #050B1C;
+  --bg2: #08182F;
+  --gold: #D4AF37;
+  --text: #F5F5F5;
+  --muted: rgba(245,245,245,0.72);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(3,9,24,0.35), rgba(3,9,24,0.50)),
+    url('ChatGPT Image 22 mai 2026, 22_58_28.png') center/cover no-repeat;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  background: rgba(3,9,24,0.92);
+  border-bottom: 1px solid rgba(212,175,55,0.18);
+  z-index: 10;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.logo-text h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.logo-text p {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.32);
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  transition: color .25s ease, transform .25s ease, background .25s ease, border-color .25s ease;
+}
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.55);
+  transform: translateY(-1px);
+}
+nav a.active {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+}
+main {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+}
+.about-hero {
+  display: grid;
+  gap: 28px;
+  padding: 80px 32px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+}
+.page-subtitle {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.85rem;
+}
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+.about-text {
+  max-width: 760px;
+  color: rgba(245,245,245,0.95);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #071026;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Cinzel', serif;
+  text-decoration: none;
+  transition: transform .25s ease, filter .25s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.info-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.2);
+}
+.info-card h2 {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+.info-card p {
+  margin: 0;
+  color: rgba(245,245,245,0.88);
+  line-height: 1.8;
+}
+footer {
+  padding: 26px 32px 40px;
+  text-align: center;
+  color: rgba(245,245,245,0.68);
+  font-size: 0.95rem;
+}
+@media (max-width: 1120px) {
+  .about-cards {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main {
+    padding: 90px 20px 40px;
+  }
+  .about-hero {
+    padding: 48px 24px;
+  }
+  .about-title {
+    font-size: 3.2rem;
+  }
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-circle">S</div>
+      <div class="logo-text"><h1>Shekinah</h1><p>Royale Events</p></div>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html" class="active">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="about-hero">
+    <p class="page-subtitle">L'élégance au service de vos événements</p>
+    <h1 class="about-title">À propos de Shekinah Royale Events</h1>
+    <p class="about-text">Chez Shekinah Royale Events, nous transformons chaque événement en une expérience unique, élégante et inoubliable. Notre passion est de créer des moments d'exception qui reflètent vos envies et dépassent vos attentes.</p>
+    <a href="services.html" class="btn-primary">Découvrir nos services</a>
+  </section>
+  <section class="about-cards">
+    <div class="info-card">
+      <h2>ÉLÉGANCE</h2>
+      <p>Des événements conçus avec raffinement et prestige, où chaque détail respire le luxe.</p>
+    </div>
+    <div class="info-card">
+      <h2>ORGANISATION</h2>
+      <p>Une gestion professionnelle du début à la fin pour une expérience fluide et maîtrisée.</p>
+    </div>
+    <div class="info-card">
+      <h2>EXPÉRIENCE</h2>
+      <p>Des souvenirs inoubliables pour vous et vos invités, portés par une mise en scène raffinée.</p>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Shekinah Royale Events</footer>
+</body>
+</html>
