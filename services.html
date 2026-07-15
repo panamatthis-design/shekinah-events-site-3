@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Shekinah Royale Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#050B1C; --bg2:#08182F; --gold:#D4AF37; --text:#F5F5F5; --muted:rgba(245,245,245,0.72); }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;min-height:100%;color:var(--text);font-family:'Poppins',sans-serif;background:radial-gradient(circle at top, rgba(212,175,55,0.12), transparent 25%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);}
+body{overflow-x:hidden}
+header{position:sticky;top:0;background:rgba(3,9,24,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,0.12);}
+.container{max-width:1240px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-circle{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:'Cinzel',serif;font-size:24px}
+.logo-text h1{font-family:'Cinzel',serif;font-size:20px;margin:0}
+nav{display:flex;gap:18px}
+nav a{color:var(--gold);text-decoration:none;font-family:'Cinzel',serif;font-size:13px;padding:8px 12px;border-radius:10px}
+
+.services-hero{max-width:1240px;margin:40px auto 10px;padding:60px 32px 40px;display:grid;gap:18px;align-items:center}
+.hero-top{text-align:center}
+.hero-top .kicker{color:var(--gold);font-family:'Cinzel',serif;letter-spacing:0.35em;text-transform:uppercase}
+.hero-top h1{font-family:'Cinzel',serif;color:var(--gold);font-size:4.8rem;letter-spacing:0.12em;margin:10px 0}
+.hero-top p{max-width:920px;margin:0 auto;color:rgba(245,245,245,0.88);line-height:1.9}
+
+.services-grid{max-width:1240px;margin:30px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,0.12);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+.service-media{height:150px;overflow:hidden}
+.service-media img{width:100%;height:150px;object-fit:cover;display:block}
+.service-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:12px}
+.service-icon{width:64px;height:64px;border-radius:50%;border:2px solid rgba(212,175,55,0.18);display:grid;place-items:center;color:var(--gold);font-size:22px}
+.service-title{font-family:'Cinzel',serif;color:var(--gold);font-size:1.05rem;text-transform:uppercase}
+.service-text{color:rgba(245,245,245,0.88);font-size:0.95rem;flex:1}
+
+.process{max-width:1240px;margin:40px auto;padding:30px 20px;display:grid;gap:18px}
+.process-grid{display:flex;justify-content:space-between;gap:18px}
+.process-step{flex:1;text-align:center;padding:18px;border-radius:12px}
+.process-step .num{width:56px;height:56px;border-radius:50%;background:rgba(212,175,55,0.08);display:inline-grid;place-items:center;color:var(--gold);font-weight:700}
+.process-step h4{margin:12px 0;color:var(--gold);font-family:'Cinzel',serif}
+.process-step p{color:rgba(245,245,245,0.86);font-size:0.95rem}
+
+.bottom-cta{max-width:1240px;margin:36px auto;padding:30px;border-radius:12px;border:1px solid rgba(212,175,55,0.12);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));}
+.cta-left{padding:12px}
+.cta-left h3{margin:0;color:var(--gold);font-family:'Cinzel',serif}
+.cta-left p{color:rgba(245,245,245,0.86)}
+.cta-btn{padding:14px 28px;border-radius:999px;background:linear-gradient(135deg,var(--gold),#ffd67a);color:#071026;font-family:'Cinzel',serif;text-transform:uppercase;border:none}
+
+@media (max-width:1100px){.services-grid{grid-template-columns:repeat(2,1fr)}.hero-top h1{font-size:3.6rem}}
+@media (max-width:720px){.services-grid{grid-template-columns:1fr}.process-grid{flex-direction:column} .bottom-cta{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo"><div class="logo-circle">S</div><div class="logo-text"><h1>Shekinah</h1><p style="color:var(--gold);font-size:12px;letter-spacing:4px;margin:0">Royale Events</p></div></div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="services-hero">
+    <div class="hero-top">
+      <div class="kicker">NOS</div>
+      <h1>SERVICES</h1>
+      <p>Chez Shekinah Royale Events, nous offrons des services sur-mesure pour créer des événements uniques, élégants et inoubliables. De la conception à la réalisation, nous prenons soin de chaque détail.</p>
+    </div>
+  </section>
+
+  <section class="services-grid">
+    <article class="service-card">
+      <div class="service-media"><img src="F8JEcNHphgoypkd21B7iHXlkGQz86VNySuKuFmbaQ407uH2SRJhzjmWCqc1TchMkqK-prmiH2_d6ksWU3Z0Ycdiw9R-5IwStADpxw4HPIyjanKTbLJ3QvgROZ714RhLz4FEwLNlESS2FhHu7j-tYhihO-1pZ0zXWGMcQzot3uFzh-TMN2m7zNMq5Et4yGivp.jpg" alt="Organisation complète"></div>
+      <div class="service-body">
+        <div class="service-icon">⚜️</div>
+        <div class="service-title">Organisation complète</div>
+        <div class="service-text">Nous prenons en charge l'intégralité de votre événement, de la conception à la réalisation, pour une expérience sans stress.</div>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-media"><img src="OM4ScLan6jhV8bZe2XJdlabQi5F5Fjx7Drd9iSZnEZaA29qFnRqz-gMj1cdwAZ1ByozGcWGgEKDjWfslett9wQlcheJlqFU5A_WzxiQ80xktrLAXm_f8hhTptkEezjw2hS6DVJq77c3Q0LJFif0nYckTIwHmmW9iLFmEgJb1xi5J2e4KD9zFj9ZUDO7bdmxj.jpg" alt="Décoration & Design"></div>
+      <div class="service-body">
+        <div class="service-icon">🌷</div>
+        <div class="service-title">Décoration & Design</div>
+        <div class="service-text">Des décors élégants et personnalisés qui subliment chaque espace et reflètent votre style et votre thème.</div>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-media"><img src="traiteur-service.png" alt="Traiteur d'exception"></div>
+      <div class="service-body">
+        <div class="service-icon">🍽️</div>
+        <div class="service-title">Traiteur d'exception</div>
+        <div class="service-text">Une expérience culinaire raffinée avec des menus sur-mesure préparés par des chefs passionnés.</div>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-media"><img src="Capture d’écran 2026-06-22 192429.png" alt="Animation & Divertissement"></div>
+      <div class="service-body">
+        <div class="service-icon">🎵</div>
+        <div class="service-title">Animation & Divertissement</div>
+        <div class="service-text">Des animations sur-mesure et des artistes talentueux pour faire de votre événement un moment inoubliable.</div>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-media"><img src="Capture d’écran 2026-06-23 195413.png" alt="Photo & Vidéo"></div>
+      <div class="service-body">
+        <div class="service-icon">📷</div>
+        <div class="service-title">Photo & Vidéo</div>
+        <div class="service-text">Nous immortalisons chaque instant avec un rendu professionnel pour des souvenirs qui durent éternellement.</div>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-media"><img src="ChatGPT Image 6 juil. 2026, 18_22_31.png" alt="Prestations sur-mesure"></div>
+      <div class="service-body">
+        <div class="service-icon">🔧</div>
+        <div class="service-title">Prestations sur-mesure</div>
+        <div class="service-text">Nous adaptons chaque prestation à vos besoins pour créer une expérience vraiment unique.</div>
+      </div>
+    </article>
+  </section>
+
+  <section class="process">
+    <h2 style="text-align:center;color:var(--gold);font-family:'Cinzel',serif;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px">Notre processus</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="num">1</div>
+        <h4>Écoute</h4>
+        <p>Nous discutons de vos envies, besoins et attentes pour comprendre votre vision.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">2</div>
+        <h4>Conception</h4>
+        <p>Nous élaborons un concept personnalisé et un plan détaillé.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">3</div>
+        <h4>Réalisation</h4>
+        <p>Notre équipe coordonne chaque détail pour une exécution parfaite le jour J.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">4</div>
+        <h4>Excellence</h4>
+        <p>Nous veillons à dépasser vos attentes et à créer des souvenirs inoubliables.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <div class="cta-left">
+      <h3>Un service sur-mesure</h3>
+      <p>Chaque événement est unique. Nous créons des expériences sur-mesure à la hauteur de vos rêves.</p>
+    </div>
+    <div>
+      <a class="cta-btn" href="mailto:shekinarevents@gmail.com?subject=Demande%20de%20devis">Demander un devis →</a>
+    </div>
+  </section>
+</main>
+<footer style="padding:26px 32px 40px;text-align:center;color:rgba(245,245,245,0.68)">© 2026 Shekinah Royale Events</footer>
+</body>
+</html>

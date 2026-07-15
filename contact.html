@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Shekinah Royale Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #050B1C;
+  --bg2: #08182F;
+  --gold: #D4AF37;
+  --text: #F5F5F5;
+  --muted: rgba(245,245,245,0.72);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, rgba(212,175,55,0.12), transparent 25%),
+              linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  background: rgba(3,9,24,0.92);
+  border-bottom: 1px solid rgba(212,175,55,0.18);
+  z-index: 10;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.logo-text h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.logo-text p {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.32);
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  transition: color .25s ease, transform .25s ease, background .25s ease, border-color .25s ease;
+}
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.55);
+  transform: translateY(-1px);
+}
+nav a.active {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.35);
+}
+.cta-button {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(212,175,55,1), rgba(255,214,105,0.95));
+  color: #071026;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+}
+.main-contact {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 60px 32px 40px;
+  display: grid;
+  gap: 40px;
+}
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr);
+  gap: 32px;
+  align-items: center;
+}
+.hero-copy {
+  display: grid;
+  gap: 22px;
+}
+.page-label {
+  display: inine-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  letter-spacing: 0.35em;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+}
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(4rem, 5vw, 6.5rem);
+  color: var(--gold);
+  letter-spacing: 0.16em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.hero-subtitle {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+}
+.hero-text {
+  max-width: 620px;
+  color: rgba(245,245,245,0.88);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+.hero-image {
+  min-height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: url('ChatGPT Image 22 mai 2026, 22_58_28.png') center/cover no-repeat;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3,9,24,0.16), rgba(3,9,24,0.84));
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr;
+  gap: 30px;
+}
+.contact-card,
+.contact-info-card,
+.map-card,
+.cta-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.18);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+}
+.contact-card h2,
+.contact-info-card h2 {
+  margin: 0 0 18px;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 18px;
+}
+.contact-form label {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font: inherit;
+}
+.contact-form textarea {
+  grid-column: span 2;
+  min-height: 170px;
+  resize: vertical;
+}
+.contact-form button {
+  grid-column: span 2;
+  justify-self: start;
+  padding: 16px 38px;
+  border: none;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #071026;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: transform .25s ease, filter .25s ease;
+}
+.contact-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.contact-info-list {
+  display: grid;
+  gap: 20px;
+}
+.contact-info-item {
+  display: grid;
+  gap: 10px;
+}
+.info-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.info-heading span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 50%;
+}
+.info-text {
+  color: rgba(245,245,245,0.86);
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+.section-title {
+  margin-bottom: 22px;
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  padding: 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  text-align: center;
+}
+.feature-card h3 {
+  margin: 0 0 14px;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.feature-card p {
+  margin: 0;
+  color: rgba(245,245,245,0.86);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.map-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+}
+.map-card {
+  min-height: 320px;
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+.map-card img,
+.map-card iframe,
+.map-card .map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  object-fit: cover;
+}
+.map-card .map-placeholder {
+  background: linear-gradient(135deg, rgba(3,9,24,0.9), rgba(3,9,24,0.75)),
+              url('https://images.unsplash.com/photo-1522293891358-7dd0adfe7f33?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+.map-details {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  align-content: center;
+}
+.map-details p {
+  margin: 0;
+  color: rgba(245,245,245,0.88);
+  line-height: 1.8;
+}
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #071026;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: transform .25s ease, filter .25s ease;
+}
+.map-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.cta-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+.cta-card p {
+  margin: 0;
+  color: rgba(245,245,245,0.88);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+@media (max-width: 1120px) {
+  .contact-hero,
+  .contact-grid,
+  .map-grid,
+  .cta-card {
+    grid-template-columns: 1fr;
+  }
+  .cta-card {
+    text-align: center;
+  }
+}
+@media (max-width: 860px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-contact {
+    padding: 40px 20px 30px;
+  }
+  .hero-title {
+    font-size: 3.6rem;
+  }
+  .feature-card {
+    padding: 20px;
+  }
+}
+@media (max-width: 620px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form textarea {
+    grid-column: span 1;
+  }
+}
+/* Modal plein écran pour la carte */
+.map-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:30px}
+.map-modal.open{display:flex}
+.map-modal .modal-content{max-width:1400px;width:100%;max-height:95vh;border-radius:14px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;position:relative}
+.map-modal img{width:100%;height:100%;object-fit:contain;display:block}
+.map-modal .close-btn{position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
+@media (max-width:720px){.map-modal{padding:12px}.map-modal .modal-content{max-height:92vh}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-circle">S</div>
+      <div class="logo-text"><h1>Shekinah</h1><p>Royale Events</p></div>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a class="cta-button" href="google-form.html">Réserver</a>
+  </div>
+</header>
+<main class="main-contact">
+  <section class="contact-hero">
+    <div class="hero-copy">
+      <h1 class="hero-title">CONTACT</h1>
+      <p class="hero-subtitle">Parlons de votre événement</p>
+      <p class="hero-text">Une question, un projet ou une demande de devis ? Nous sommes à votre écoute pour créer ensemble un événement exceptionnel et sur-mesure.</p>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <section class="contact-grid">
+    <div class="contact-card">
+      <h2>Envoyez-nous un message</h2>
+      <form class="contact-form" action="mailto:shekinarevents@gmail.com" method="post" enctype="text/plain">
+        <label>
+          Nom complet *
+          <input type="text" placeholder="Votre nom complet" />
+        </label>
+        <label>
+          Email *
+          <input type="email" placeholder="votre@email.com" />
+        </label>
+        <label>
+          Téléphone *
+          <input type="tel" placeholder="+33 6 12 34 56 78" />
+        </label>
+        <label>
+          Sujet *
+          <input type="text" placeholder="Objet de la demande" />
+        </label>
+        <label>
+          Votre message *
+          <textarea placeholder="Décrivez votre projet..."></textarea>
+        </label>
+        <button type="submit">Envoyer le message</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <h2>Nos coordonnées</h2>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="info-heading"><span>📞</span>Téléphone</div>
+          <p class="info-text">07 67 91 96 58</p>
+          <p class="info-text">07 43 25 68 74</p>
+        </div>
+        <div class="contact-info-item">
+          <div class="info-heading"><span>✉️</span>Email</div>
+          <p class="info-text">shekinarevents@gmail.com</p>
+        </div>
+        <div class="contact-info-item">
+          <div class="info-heading"><span>📍</span>Adresse</div>
+          <p class="info-text">306 route de launaguet</p>
+        </div>
+        <div class="contact-info-item">
+          <div class="info-heading"><span>🌐</span>Suivez-nous</div>
+          <p class="info-text">Instagram • Facebook • Pinterest • TikTok</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Pourquoi nous contacter ?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Réactivité</h3>
+        <p>Nous vous répondons dans les plus brefs délais pour concrétiser vos projets.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Accompagnement</h3>
+        <p>Un interlocuteur dédié vous accompagne à chaque étape de votre événement.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Sur-mesure</h3>
+        <p>Des prestations personnalisées selon vos envies, votre budget et vos attentes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Excellence</h3>
+        <p>Un service haut de gamme pour un événement à la hauteur de vos rêves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-grid">
+    <div class="map-card">
+      <img src="map-location.png" alt="Localisation">
+    </div>
+    <div class="map-details">
+      <h2>Où nous trouver</h2>
+      <p>Basés à Toulouse, nous intervenons en France et à l'international pour donner vie à vos événements d'exception.</p>
+      <p class="info-text"><strong>306 route de launaguet</strong></p>
+      <a href="#" class="map-button">Voir sur la carte</a>
+    </div>
+  </section>
+</main>
+  <!-- Modal carte fullscreen -->
+  <div id="mapModal" class="map-modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button id="mapModalClose" class="close-btn" aria-label="Fermer">Fermer ✕</button>
+      <img id="mapModalImg" src="map-location.png" alt="Carte - localisation">
+    </div>
+  </div>
+
+  <footer>© 2026 Shekinah Royale Events</footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.querySelector('.map-button');
+    const modal = document.getElementById('mapModal');
+    const modalImg = document.getElementById('mapModalImg');
+    const closeBtn = document.getElementById('mapModalClose');
+    const mapImg = document.querySelector('.map-card img');
+    if(btn && modal){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        modalImg.src = mapImg ? mapImg.src : 'map-location.png';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      });
+      closeBtn.addEventListener('click', function(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', function(e){ if(e.target===modal){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; } });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; } });
+    }
+  });
+  </script>
+</body>
+</html>
